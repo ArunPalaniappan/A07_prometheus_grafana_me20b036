@@ -15,8 +15,6 @@ RUN apt-get update && \
 COPY requirements.txt /usr/src/app/
 COPY mnist_exp_2.h5 /app/model/
 RUN pip install --upgrade pip setuptools wheel && \
-    pip install --no-cache-dir -r requirements.txt && \
-    rm -rf /root/.cache/pip
+    pip install --no-cache-dir -r requirements.txt
 
-# Copy project files
 COPY . /usr/src/app/
