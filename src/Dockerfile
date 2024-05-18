@@ -13,7 +13,7 @@ RUN apt-get update && \
 
 # Copy and install Python dependencies
 COPY requirements.txt /usr/src/app/
-COPY mnist_exp_2.h5 /app/model
+COPY mnist_exp_2.h5 /app/model/
 RUN pip install --upgrade pip setuptools wheel && \
     pip install --no-cache-dir -r requirements.txt && \
     rm -rf /root/.cache/pip
